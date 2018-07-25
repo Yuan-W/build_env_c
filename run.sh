@@ -2,4 +2,4 @@
 
 ARGS=$@
 
-make $ARGS -C/src
+make $ARGS -C /src

@@ -6,10 +6,10 @@ Dockerized Environment for build C projects
 
 __Compilation__
 
-Just run `docker run --rm -v "$PWD:/src" -it yuanw/sdk-env`
+`docker build -t <label:version> .`
 
-Or add as an alias:
+__Run Container(Start Build)__
+`docker run --rm -v "$PWD:/src" -it <label:version> <Make Arguments>`
 
-`alias mksdk='docker run --rm -v "$PWD:/src" -it yuanw/sdk-env'`
-
-And run `mksdk`
+__Start Interactive Shell__
+`docker run --rm -v "$PWD:/src" -it --entrypoint=/bin/bash  <label:version>`
