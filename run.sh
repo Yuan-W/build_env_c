@@ -2,4 +2,8 @@
 
 ARGS=$@
 
-make $ARGS -C /src
+if [[ $ARGS == *"menuconfig"* ]]; then
+    make $ARGS -C /src
+else
+    mmake $ARGS -C /src
+fi
